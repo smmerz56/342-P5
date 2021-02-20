@@ -1,0 +1,42 @@
+
+Execution and output -- 10 points
+Graded on (assume yes/correct unless stated otherwise):
+  Gives correct output?
+     Not 100% as specified (as noted in readme).
+  Good visual output, formatted nicely with numbers lined up in columns?
+  Errors printed clearly?
+  No memory leaks?
+
+Implementation -- 20 points
+Graded on (assume yes/correct/good unless stated otherwise):
+  Clear class defs, fn names?
+  Comments (ADT, assumptions)?
+  Comments (internal in functions)?
+     Could use few more.
+
+  Short main, uses manager class?
+  Queue used somewhere?
+  Manager holds tree and queue?
+  Meaningful operations?
+  Transaction class (or similar)? Separate Account class (of 2 ints)?
+  Modularity/clean code?
+     Too much low-level work in manager. Better to let Transaction object do
+     the work, so if things change or are added, detailed work is localized.
+     At least client does most the work dealing with its money.
+
+  Follow directions?
+
+Grade: 10 + 17 = 27 out of 30
+
+..................readme........................
+
+1. If a history is in a command.txt file,
+my program will print the history before the rest of the commands are processed.
+So if an unknown client or invalid withdrawal is in the command.txt file after
+a history command, it will be displayed after the history.
+
+2. If a Money Market account doesnt have enough money in it to make withdrawal
+or move from, the program will look to take all the funds from another
+Money Market account. If the other MM can not cover it, then it will try taking
+from both. The output is slightly different for Minnie Mouse because of this but
+the total of funds in her MM accounts are the same. Bonds work in a similar way.
